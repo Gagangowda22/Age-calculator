@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,700;1,800&display=swap");
+
+:root {
+  --purple: hsl(259, 100%, 65%);
+  --error: hsl(0, 100%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --offwhite: hsl(0, 0%, 94%);
+  --lightgray: hsl(0, 0%, 86%);
+  --smokeygray: hsl(0, 1%, 44%);
+  --offblack: hsl(0, 0%, 8%);
+  --fontsize: 32px;
+  --fontfamily: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--fontfamily);
+  font-weight: 800;
+}
+
+body {
+  background-color: var(--lightgray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input {
+  outline: none;
+  padding: 1rem;
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  width: 100px;
+}
+
+input:focus {
+  border-color: var(--purple);
+}
+
+label {
+  font-size: 14px;
+  color: var(--smokeygray);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--offwhite);
+  border-radius: 15px 15px 80px 15px;
+  padding: 3rem 3rem 6rem 3rem;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.error {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--error);
+  opacity: 0;
+}
+
+button {
+  position: absolute;
+  margin-top: 126px;
+  outline: none;
+  background-color: var(--purple);
+  border-radius: 50%;
+  padding: 0.8rem 1rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  justify-content: center;
+}
+
+button:hover {
+  background-color: var(--offblack);
+}
+
+hr {
+  border: 0;
+  width: 100%;
+  border-top: 2px solid var(--lightgray);
+  grid-column: 1/-1;
+}
+
+section {
+  position: absolute;
+  top: 52%;
+}
+
+.age-display {
+  font-size: var(--fontsize);
+  font-style: italic;
+}
+
+h1 > span {
+  color: var(--purple);
+}
+
+@media only screen and (min-width: 350px) and (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+  main {
+    margin: 1rem;
+  }
+  button {
+    justify-self: center;
+    margin-top: 146px;
+  }
+}
